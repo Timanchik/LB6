@@ -1,6 +1,9 @@
-language: python
-puthon: 3.8
-script: 
-  - cd PythonApplication1
-  - pytest
-  - cd ..
+branches:
+  only:
+  - master
+  - dev
+import:
+- source: .travis/pre-release.yml
+  if: branch = dev
+- source: .travis/release.yml
+  if: branch = master
