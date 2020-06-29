@@ -4,3 +4,4 @@ script:
   - cd PythonApplication1
   - pytest
   - cd ..
+
