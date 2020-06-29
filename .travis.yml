@@ -1,0 +1,9 @@
+branches:
+  only:
+  - master
+  - dev
+import:
+- source: .travis/pre-release.yml
+  if: branch = dev
+- source: .travis/release.yml
+  if: branch = master
